@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator} from '@react-navigation/stack';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, Image,ImageBackground,StyleSheet, TextInput, } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -47,11 +47,18 @@ return (
 
 function TabA({navigation}) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center',  alignItems: 'center' }}>
+    <ImageBackground source={require('./assets/R.gif')} 
+    style={{ flex: 1,justifyContent: 'center',  alignItems: 'center'}}>
       <Text>
         Welcome To Home
       </Text>
-    </View>
+      <Image
+    source={require('./assets/pimon.jpg')}
+    style={{ width: 60,
+     height: 60,
+     borderRadius: 90,} }       
+    />
+    </ImageBackground>
   );
 }
 
